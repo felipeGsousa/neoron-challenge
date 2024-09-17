@@ -58,6 +58,15 @@ button:focus-visible {
   padding: 2em;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  margin: 1.5rem;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;

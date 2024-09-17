@@ -3,9 +3,12 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { FlightController } from './flight/controllers/flight.controller';
+import { FlightModule } from './flight/flight.module';
 
 @Module({
   imports: [
+    FlightModule,
     ConfigModule.forRoot({isGlobal: true}),
     TypeOrmModule.forRoot({ 
       type: 'postgres',

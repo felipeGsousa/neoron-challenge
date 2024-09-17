@@ -1,16 +1,33 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { Place } from "./place.interface";
 
 @Entity('flight')
 export class FlightEntity {
     @PrimaryGeneratedColumn()
     id: number;
     
-    @Column('jsonb', {nullable: false})
-    origin:Place;
+    @Column()
+    zipOrigin: string;
 
-    @Column('jsonb', {nullable: false})
-    destination:Place;
+    @Column()
+    countryOrigin: string;
+
+    @Column()
+    cityOrigin: string;
+
+    @Column()
+    stateOrigin: string;
+
+    @Column()
+    zipDestination: string;
+
+    @Column()
+    countryDestination: string;
+
+    @Column()
+    cityDestination: string;
+
+    @Column()
+    stateDestination: string;
 
     @Column({type: 'timestamp'})
     date: Date;

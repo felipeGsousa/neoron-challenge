@@ -9,6 +9,6 @@ import { FlightEntity } from './models/flight.entity';
     TypeOrmModule.forFeature([FlightEntity])
   ],
   providers: [FlightService],
-  controllers: [FlightController]
+  controllers: [FlightController],
 })
 export class FlightModule {}

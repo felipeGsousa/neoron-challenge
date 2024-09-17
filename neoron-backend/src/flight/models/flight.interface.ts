@@ -1,8 +1,13 @@
-import { Place } from "./place.interface";
 
 export interface Flight {
     id?:number;
-    origin:Place;
-    destination:Place;
+    zipOrigin: string;
+    countryOrigin: string;
+    cityOrigin: string;
+    stateOrigin: string;
+    zipDestination: string;
+    countryDestination: string;
+    cityDestination: string;
+    stateDestination: string;
     date:Date;
 }
